@@ -1,15 +1,13 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+'use client';
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Welcome to Course Mart
-        
-        </p>
-        </div>
-    </main>
-  )
-}
+// If used in Pages Router, is no need to add this line
+import React from 'react';
+import { Button } from 'antd';
+
+const Home = () => (
+  <div className="App">
+    <Button type="primary">Button</Button>
+  </div>
+);
+
+export default Home;
