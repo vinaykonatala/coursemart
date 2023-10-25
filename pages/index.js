@@ -1,7 +1,5 @@
-'use client';
+import React from 'react'
 
-// If used in Pages Router, is no need to add this line
-import React from 'react';
 import { Button } from 'antd';
 
 const Home = () => (
