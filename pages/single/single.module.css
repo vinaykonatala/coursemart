@@ -1,0 +1,154 @@
+.banner {
+    background: #f4f6fd;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+ .content {
+    padding: 60px 0;
+}
+
+.banner p {
+  
+    line-height: 24px;
+    font-size: 16px;
+    letter-spacing: .2px;
+    color: #222;
+}
+
+.banner h1{
+    font-size: 36px;
+    margin-bottom: 14px;
+}
+
+.rating {
+    margin: 10px 0 0 0;
+}
+
+.rating .ant-image-mask {
+    margin-right: 10px;
+}
+
+.ratingText {
+    margin-left: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.learnPoints {
+    padding: 0px 0 40px;
+}
+.learnPoints .content{
+    border: 1px solid #e1e1e1;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 2px solid #729df5;
+}
+.learnPoints h2 {margin-bottom: 28px;}
+.learnPoints ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.learnPoints  li {
+    width: 33.3%;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-start;
+    padding-right: 20px;
+}
+
+.learnPoints  li svg{
+    color: #1777ff;
+    margin-right: 5px;
+}
+
+.courseContent {
+margin-bottom: 40px;
+}
+
+.courseContent h2 {
+    margin-bottom: 20px;
+}
+
+.points {
+    font-size: 16px;
+    margin-bottom: 10px;
+    list-style:disc;
+}
+
+.txt {
+    display: block;
+    margin:-1px 0 0 0;
+}
+
+.priceBox {
+    position: fixed;
+    top: 140px;
+        left: 50%;
+     margin-left: 260px;
+}
+
+.priceBlock {
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    width: 324px;
+}
+
+
+
+.price {
+    margin: 15px 0 20px 0;
+    font-size: 20px;
+}
+
+.price b {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.price span {
+    font-size: 20px;
+    color: #6a6f73;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.smallText {
+    color: #6a6f73;
+    display: block;
+    text-align: center;
+    margin: 10px 0 0;
+    font-size: 12px;
+}
+
+
+
+.contactBlock{
+    padding: 20px 0;
+    border-top: 1px solid #e1e1e1;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contactBlock p{
+    margin-bottom: 10px;
+}
+.dailBlock {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+.dailBlock svg{
+    font-size: 20px;
+    margin-right: 6px;
+    transform: rotate(119deg);
+}
+
+.dail b {display: block;
+    color: #1777ff;}
+    .dail .smalltext {
+        color: #6a6f73;
+        font-size: 12px;
+    }
