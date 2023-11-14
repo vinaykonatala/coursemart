@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './wizard.module.css'
+import { SearchOutlined, FileSearchOutlined} from '@ant-design/icons';
 
 function index() {
   return (

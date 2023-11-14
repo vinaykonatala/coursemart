@@ -57,6 +57,7 @@ function index() {
                     width={200}
                     height={40}
                     src={'https://i.imgur.com/yUpYCFp.png'}
+                    preview={false}
                 />
                 </div>
                 <div className={`${styles.nav} flex`}>

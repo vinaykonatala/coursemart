@@ -32,6 +32,7 @@ function index() {
                     // width={300}
                    
                     src={'https://i.imgur.com/Gui2Ent.png'}
+                    preview={false}
                 />
             </div>
 

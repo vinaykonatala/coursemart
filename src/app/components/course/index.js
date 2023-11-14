@@ -14,6 +14,7 @@ console.log(type)
         height={`${type === 'single' ? '100%' : '200px' }`}
         width={`${type === 'single' ? '240px' : '100%' }`}
              src={'https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=750&q=75'}
+             preview={false}
         />
         </div>
         <div className={styles.content}>
