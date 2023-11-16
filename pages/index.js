@@ -4,18 +4,17 @@ import Banner from '../src/app/components/banner'
 import Wizard from '../src/app/components/wizard'
 import Courses from '../src/app/components/courses'
 import './globals.css'
+import { ClerkProvider } from '@clerk/nextjs'
 
 const Home = () => (
-  <div className="App">
-    <div className='main'>
-    <Header />
-    <Banner />
-    <Courses />
-    {/* <Wizard /> */}
-    </div>
+  <ClerkProvider>
+    <main className='main'>
+      <Header />
+      <Banner />
+      <Courses />
+      {/* <Wizard /> */}
+    </main>
+  </ClerkProvider>
+)
 
-
-  </div>
-);
-
-export default Home;
+export default Home
