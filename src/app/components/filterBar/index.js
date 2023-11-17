@@ -40,7 +40,7 @@ function index() {
       };
   return (
     <div className='filterBar'>
-        <Collapse items={items} defaultActiveKey={['1', '2', '3']} onChange={onChange} expandIconPosition={'right'} />
+        <Collapse items={items} defaultActiveKey={['1', '2', '3']} onChange={onChange} expandIconPosition={'end'} />
     </div>
   )
 }
