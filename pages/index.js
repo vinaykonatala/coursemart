@@ -7,14 +7,14 @@ import './globals.css'
 import { ClerkProvider } from '@clerk/nextjs'
 
 const Home = () => (
-  <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
+  // <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
     <main className='main'>
       <Header />
       <Banner />
       <Courses />
       {/* <Wizard /> */}
     </main>
-  </ClerkProvider>
+  // </ClerkProvider>
 )
 
 export default Home
