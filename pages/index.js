@@ -5,6 +5,8 @@ import Wizard from '../src/app/components/wizard'
 import Courses from '../src/app/components/courses'
 import './globals.css'
 import { ClerkProvider } from '@clerk/nextjs'
+import 'react-quill/dist/quill.snow.css';
+
 
 const Home = () => (
   // <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>

@@ -2,8 +2,10 @@ import React from 'react'
 import Header from '/src/app/components/header'
 import styles from './single.module.css'
 import '../globals.css'
-import { Image, Anchor, Collapse, Row, Col, Button } from 'antd';
-import { CheckOutlined, SafetyCertificateFilled, SafetyCertificateOutlined,UserOutlined, FieldTimeOutlined , PhoneFilled} from '@ant-design/icons';
+import { Image, Anchor, Collapse, Row, Col, Button, } from 'antd';
+import { CheckOutlined, SafetyCertificateFilled, SafetyCertificateOutlined,UserOutlined, FieldTimeOutlined , PhoneFilled, ShopOutlined
+,EnvironmentOutlined,HighlightOutlined, CrownOutlined } from '@ant-design/icons';
+
 
 const text = `
 A dog is a type of domesticated animal.
@@ -185,7 +187,33 @@ const index = () => (
 
         </div>
 
-        <div className={styles.contactBlock}>
+        <div className={styles.course}>
+          <div className={styles.course_block}>
+            <ShopOutlined />
+            <b><Anchor href="#" to="">Naresh IT Technoligy</Anchor></b>
+          </div>
+          <div className={styles.course_block}>
+          <EnvironmentOutlined />
+            <b>Ammerpet, Hyderabad </b>
+          </div>
+          <div className={styles.course_block}>
+          <HighlightOutlined />
+            <b>English </b>
+          </div>
+          <div className={styles.course_block}>
+          <CrownOutlined />
+           <b> Job Guarantee</b>
+          </div>
+          <div className={styles.course_block}>
+          <PhoneFilled /> 
+          <div className={styles.dail}>
+               <b> + 91 7702890893</b>
+               <span className={styles.smalltext}>Available 24x7 for your queries</span>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className={styles.contactBlock}>
             <p>Have Queries? Ask our Experts</p>
             <div className={styles.dailBlock}>
             <PhoneFilled /> 
@@ -194,7 +222,7 @@ const index = () => (
                <span className={styles.smalltext}>Available 24x7 for your queries</span>
             </div>
             </div>
-        </div>
+        </div> */}
    </div>
 </Col>
         </Row>

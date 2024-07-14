@@ -1,3 +1,4 @@
+import React, { useState, useRef } from 'react';
 import { UploadOutlined } from "@ant-design/icons";
 import {
   Button,
@@ -9,10 +10,16 @@ import {
   Space,
   Switch,
   Upload,
+  Row,Col,Divider,Steps,
 } from "antd";
+
+import TextEditor from '../../../src/app/components/textEditor'
+
 const { Option } = Select;
 const { TextArea } = Input;
 const { RangePicker } = DatePicker;
+
+const { Step } = Steps;
 
 const formItemLayout = {
   labelCol: {
@@ -32,19 +39,74 @@ const normFile = (e) => {
 const onFinish = (values) => {
   console.log("Received values of form: ", values);
 };
+
+const onChange = (date, dateString) => {
+  console.log(date, dateString);
+};
+
+// const [form] = Form.useForm();
+
 const FormComponent = () => (
+  <>
+   {/* <Steps current={0}>
+   <Step title="Step 1" description="This is step 1dfdf">
+    sdfzd
+          <Form name="dfdf" onFinish={onFinish} layout="vertical">
+            <Form.Item
+              name="username"
+              label="Username"
+              rules={[{ required: true, message: 'Please input your username!' }]}
+            >
+              <Input placeholder="Enter your username" />
+            </Form.Item>
+            <Form.Item
+              name="email"
+              label="Email"
+              rules={[
+                { required: true, message: 'Please input your email!' },
+                { type: 'email', message: 'Please enter a valid email!' },
+              ]}
+            >
+              <Input placeholder="Enter your email" />
+            </Form.Item>
+            <Form.Item>
+              <Button type="primary" htmlType="submit">
+                Next
+              </Button>
+            </Form.Item>
+          </Form>
+        </Step>
+        <Step title="Step 2" description="This is step 2">
+          <Form  onFinish={onFinish} layout="vertical">
+            <Form.Item
+              name="phoneNumber"
+              label="Phone Number"
+              rules={[{ required: true, message: 'Please input your phone number!' }]}
+            >
+              <Input placeholder="Enter your phone number" />
+            </Form.Item>
+            <Form.Item>
+              <Button type="primary" htmlType="submit">
+                Next
+              </Button>
+            </Form.Item>
+          </Form>
+        </Step>
+        <Step title="Step 3" description="This is step 3">
+          <p>Content of step 3</p>
+        </Step>
+   </Steps> */}
   <Form
     name="validate_other"
-    {...formItemLayout}
+   
     onFinish={onFinish}
-    initialValues={{
-      active: true,
-    }}
-    style={{
-      maxWidth: 600,
-    }}
+   
+    layout="vertical"
+  
   >
-    <Form.Item
+     <Row gutter={16}>
+      <Col span={8}>
+      <Form.Item
       name="title"
       label="Course Title"
       rules={[
@@ -56,6 +118,20 @@ const FormComponent = () => (
       <Input />
     </Form.Item>
     <Form.Item
+      name="Price"
+      label="Course Price"
+      rules={[
+        {
+          required: true,
+        },
+      ]}
+    >
+      <Input />
+    </Form.Item>
+
+      </Col>
+      <Col span={16}>
+      <Form.Item
       name="description"
       rules={[
         {
@@ -66,147 +142,106 @@ const FormComponent = () => (
     >
       <TextArea rows={4} />
     </Form.Item>
-    <Form.Item
-      name="sessions"
-      rules={[
-        {
-          required: true,
-        },
-      ]}
-      label="Sessions"
-    >
-      <Form.Item name="sessions" noStyle>
-        <Input />
-      </Form.Item>
-    </Form.Item>
-    <Form.Item
-      name="price"
-      rules={[
-        {
-          required: true,
-        },
-      ]}
-      label="Price"
-    >
-      <Form.Item name="price" noStyle>
-        <Input />
-      </Form.Item>
-    </Form.Item>
-    <Form.Item
-      name="studentsEnrolled"
-      rules={[
-        {
-          required: true,
-        },
-      ]}
-      label="Students Enrolled"
-    >
-      <Form.Item noStyle>
-        <Input />
-      </Form.Item>
-    </Form.Item>
-    <Form.Item
-      name="numReviews"
-      rules={[
-        {
-          required: true,
-        },
-      ]}
-      label="No of Reviews"
-    >
-      <Form.Item noStyle>
-        <Input />
-      </Form.Item>
-    </Form.Item>
-    <Form.Item
-      name="courseDuration"
-      rules={[
-        {
-          required: true,
-        },
-      ]}
-      label="Course Duration"
-    >
-      <Form.Item noStyle>
-        <Input />
-      </Form.Item>
-    </Form.Item>
-    <Form.Item
-      name="instructor"
-      label="Instructor"
-      hasFeedback
-      rules={[
-        {
-          required: true,
-          message: "Please select instructor!",
-        },
-      ]}
-    >
-      <Select placeholder="Please select instructor">
-        <Option value={1}>Instructor 1</Option>
-        <Option value={2}>Instructor 2</Option>
-      </Select>
-    </Form.Item>
-    <Form.Item
-      name="category"
-      label="Category"
-      rules={[
-        {
-          required: true,
-          message: "Please select categories!",
-          type: "array",
-        },
-      ]}
-    >
-      <Select mode="multiple" placeholder="Please select categories">
-        <Option value={1}>Programming</Option>
-        <Option value={2}>AI</Option>
-        <Option value={3}>ML</Option>
-      </Select>
-    </Form.Item>
+      </Col>
 
-    <Form.Item
+    </Row>
+
+    <Row gutter={16}>
+      <Col span={8}>
+      <Form.Item
+      name="Price"
+      label="Duration"
       rules={[
         {
           required: true,
         },
       ]}
-      label="RangePicker"
     >
-      <RangePicker />
+      <Input />
     </Form.Item>
-
-    <Form.Item name="active" label="Active" valuePropName="checked">
-      <Switch />
-    </Form.Item>
-
-    <Form.Item name="rating" label="Rating">
-      <Rate />
-    </Form.Item>
-
-    <Form.Item
-      name="upload"
-      label="Upload"
-      valuePropName="fileList"
-      getValueFromEvent={normFile}
+      </Col>
+      <Col span={8}>
+      <Form.Item
+      name="Price"
+      label="language"
+      rules={[
+        {
+          required: true,
+        },
+      ]}
     >
-      <Upload name="logo" action="/upload.do" listType="picture">
-        <Button icon={<UploadOutlined />}>Click to upload</Button>
-      </Upload>
+      <Input />
     </Form.Item>
-    <Form.Item
-      wrapperCol={{
-        span: 12,
-        offset: 6,
-      }}
+      </Col>
+      <Col span={8}>
+      <Form.Item
+      name="date"
+      label="Start Date"
+      rules={[
+        {
+          required: true,
+        },
+      ]}
     >
-      <Space>
-        <Button type="primary" htmlType="submit">
-          Submit
-        </Button>
-        <Button htmlType="reset">Reset</Button>
-      </Space>
+      <DatePicker onChange={onChange} />
     </Form.Item>
+      </Col>
+    </Row>
+  
+    <Divider orientation="left">What you'll learn</Divider>
+    <Row>
+      <Col span={24}>
+      <TextEditor />
+      </Col>
+    </Row>
+
+    <Divider orientation="left">Key Features</Divider>
+    <Row>
+      <Col span={24}>
+      <TextEditor />
+      </Col>
+    </Row>
+
+    <Divider orientation="left">Course content</Divider>
+    <Row>
+      <Col span={24}>
+      <Form.Item
+      name="title"
+      label="Title"
+      rules={[
+        {
+          required: true,
+        },
+      ]}
+    >
+      <Input />
+      </Form.Item>
+      <TextEditor />
+      </Col>
+      <Col span={24}>
+      <Form.Item
+      name="title"
+      label="Title"
+      rules={[
+        {
+          required: true,
+        },
+      ]}
+    >
+      <Input />
+      </Form.Item>
+      <TextEditor />
+      </Col>
+    </Row>
+
+    <Divider orientation="left">Prerequisites</Divider>
+    <Row>
+      <Col span={24}>
+      <TextEditor />
+      </Col>
+    </Row>
+   
   </Form>
+  </>
 );
 export default FormComponent;

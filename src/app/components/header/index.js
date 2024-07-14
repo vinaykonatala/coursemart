@@ -73,6 +73,9 @@ function index() {
                    
                     </div>
                     <div className={styles.navItem}>
+                        <span>Institutes</span>
+                    </div>
+                    <div className={styles.navItem}>
                         <span>About</span>
                     </div>
                 </div>
